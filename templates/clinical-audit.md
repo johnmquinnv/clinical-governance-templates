@@ -1,5 +1,8 @@
 # Clinical audit template
 
+**Version:** 1.1.0 · **Last editorial update:** 22 October 2026  
+**Maintainer:** John Quinn, MD, MPH, PhD, EMT-P. Educational draft; see the [repository review status](../README.md).
+
 Audit cycle: choose topic, set standards, collect data, analyse, act, then re-audit to confirm improvement.
 
 ## 1. Project details

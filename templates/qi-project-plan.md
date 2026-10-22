@@ -1,5 +1,8 @@
 # Quality improvement project plan
 
+**Version:** 1.1.0 · **Last editorial update:** 22 October 2026  
+**Maintainer:** John Quinn, MD, MPH, PhD, EMT-P. Educational draft; see the [repository review status](../README.md).
+
 Based on the Model for Improvement: three questions plus PDSA (Plan-Do-Study-Act) cycles to test changes on a small scale before scaling up.
 
 ## 1. Project details
