@@ -14,6 +14,14 @@ Blank, reusable templates for clinical audit, patient safety incident review, an
 2. [Incident review](templates/incident-review.md): a systems-focused learning review.
 3. [QI project plan](templates/qi-project-plan.md): Model for Improvement and PDSA cycles.
 
+## Additional portfolio collections
+
+- [Medical assistance and evacuation governance](assistance-governance/README.md): generic responsibility and assurance worksheet.
+- [Health security and medical interoperability](health-security/README.md): public-source evidence and analysis framework.
+- [Synthetic governance dashboard](data-demo/README.md): downloadable browser demonstration with invented records and documented metrics.
+
+These examples contain no employer materials or patient data and are not approved operational policies.
+
 ## Background reading
 
 - [HQIP: Documenting local clinical audit](https://www.hqip.org.uk/wp-content/uploads/2020/05/Final-Clinical-Audit-Reporting-guide-2020.pdf)

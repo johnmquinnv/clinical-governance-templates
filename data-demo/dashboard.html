@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Synthetic governance dashboard</title>
+<style>
+:root{font-family:system-ui,sans-serif;color:#18343d;background:#eef4f5}*{box-sizing:border-box}body{margin:0}main{max-width:1080px;margin:auto;padding:36px 20px}header{border-bottom:2px solid #bad0d4;padding-bottom:24px}h1{font-size:clamp(28px,5vw,42px);margin:10px 0}p{line-height:1.6}.label{font-size:13px;letter-spacing:.08em;text-transform:uppercase;color:#45656c}select{font:inherit;padding:10px;margin:8px;border:1px solid #54747b;border-radius:6px;background:white}.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;margin:24px 0}.card{background:white;border:1px solid #c7d9dc;border-radius:10px;padding:20px}.card strong{display:block;font-size:32px;margin:10px 0}.card small{color:#45656c}.tablewrap{overflow:auto}table{width:100%;border-collapse:collapse;background:white}caption{text-align:left;font-size:20px;font-weight:600;padding:16px 0}th,td{text-align:left;padding:12px;border-bottom:1px solid #d5e1e3;white-space:nowrap}th{background:#dcebed}footer{margin-top:22px;color:#45656c}select:focus{outline:3px solid #006b80}
+</style></head><body><main><header><div class="label">John Quinn · Portfolio demonstration · v0.1.0</div><h1>Governance documentation review</h1><p>Eight invented records. Explore documentation completeness and follow-up actions by fictional team.</p><p><strong>Synthetic data only.</strong> This is a demonstration, not a live clinical service or a measure of patient safety.</p></header>
+<label for="team">Team</label><select id="team"><option value="All">All teams</option><option>Alpha</option><option>Beta</option></select>
+<section id="cards" class="cards" aria-live="polite"></section>
+<div class="tablewrap"><table><caption>Underlying synthetic records</caption><thead><tr><th scope="col">Record</th><th scope="col">Team</th><th scope="col">Reviewed</th><th scope="col">Handover complete</th><th scope="col">Action required</th><th scope="col">Action closed</th><th scope="col">Open overdue</th></tr></thead><tbody id="rows"></tbody></table></div>
+<footer><p>Rates show their numerators and denominators. Action closure excludes records with no required action. Overdue status is a fixed fictional snapshot. No clinical quality threshold is applied.</p><p>Download and open locally. No data is uploaded or sent anywhere.</p></footer></main>
+<script>
+const records=[
+{id:"D001",team:"Alpha",reviewed:true,handover:true,action:true,closed:true,overdue:false},
+{id:"D002",team:"Alpha",reviewed:true,handover:true,action:false,closed:false,overdue:false},
+{id:"D003",team:"Alpha",reviewed:false,handover:false,action:true,closed:false,overdue:true},
+{id:"D004",team:"Alpha",reviewed:true,handover:true,action:false,closed:false,overdue:false},
+{id:"D005",team:"Beta",reviewed:true,handover:true,action:true,closed:true,overdue:false},
+{id:"D006",team:"Beta",reviewed:true,handover:false,action:true,closed:false,overdue:true},
+{id:"D007",team:"Beta",reviewed:false,handover:false,action:true,closed:false,overdue:false},
+{id:"D008",team:"Beta",reviewed:true,handover:true,action:false,closed:false,overdue:false}];
+function summarize(data){const n=data.length,reviewed=data.filter(r=>r.reviewed).length,handover=data.filter(r=>r.handover).length,actions=data.filter(r=>r.action).length,closed=data.filter(r=>r.action&&r.closed).length,overdue=data.filter(r=>r.action&&!r.closed&&r.overdue).length;return {n,reviewed,handover,actions,closed,overdue}}
+function percent(n,d){return d?(100*n/d).toFixed(1)+"%":"Not applicable"}
+function render(){const team=document.getElementById("team").value,data=records.filter(r=>team==="All"||r.team===team),s=summarize(data);
+const cards=[["Records",String(s.n),"Displayed fictional records"],["Reviewed",percent(s.reviewed,s.n),s.reviewed+" / "+s.n+" records"],["Handover complete",percent(s.handover,s.n),s.handover+" / "+s.n+" records"],["Actions closed",percent(s.closed,s.actions),s.closed+" / "+s.actions+" required actions"],["Open overdue",String(s.overdue),"Required actions still open"]];
+document.getElementById("cards").replaceChildren(...cards.map(([label,value,note])=>{const box=document.createElement("article");box.className="card";const title=document.createElement("span"),big=document.createElement("strong"),small=document.createElement("small");title.textContent=label;big.textContent=value;small.textContent=note;box.append(title,big,small);return box}));
+document.getElementById("rows").replaceChildren(...data.map(r=>{const tr=document.createElement("tr");[r.id,r.team,r.reviewed?"Yes":"No",r.handover?"Yes":"No",r.action?"Yes":"No",r.action?(r.closed?"Yes":"No"):"Not applicable",r.action&&!r.closed&&r.overdue?"Yes":"No"].forEach(v=>{const td=document.createElement("td");td.textContent=v;tr.append(td)});return tr}))}
+document.getElementById("team").addEventListener("change",render);render();
+</script></body></html>
