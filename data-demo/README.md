@@ -1,14 +1,14 @@
 # Synthetic governance dashboard
 
 **Maintainer:** John Quinn, MD, MPH, PhD, EMT-P  
-**Version:** 0.1.0 · **Updated:** 22 October 2026  
+**Version:** 0.2.0 · **Updated:** 31 October 2026  
 **Status:** original educational demonstration; not approved operational policy. No real patient or employer data.
 
-A small, self-contained browser demonstration showing documentation completeness and action follow-up. Every record is invented. It contains no external libraries, network requests or data upload facility.
+A small, self-contained browser demonstration showing documentation completeness and action follow-up. Every record is invented. It contains no external libraries or data upload facility. Filtering and CSV generation run locally; resource links navigate to their stated destinations.
 
 ## Run
 
-Download [dashboard.html](dashboard.html) and open it in a modern browser. GitHub's file view shows the source; the repository is not a hosted live dashboard. Filter by fictional team, inspect the numerator and denominator, and compare completion rates with unresolved overdue actions.
+Open the [hosted preview (account access required)](https://john-quinn-governance-demo.cuinne.chatgpt.site), or download [dashboard.html](dashboard.html) and open it locally. Filter by fictional team, inspect each numerator and denominator, export the displayed rows as CSV, and print the current view. GitHub's HTML file view shows source code. The [verification record](VERIFICATION.md) documents calculation and data checks.
 
 ## Definitions
 

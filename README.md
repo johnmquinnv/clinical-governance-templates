@@ -1,7 +1,7 @@
 # Clinical Governance Templates
 
 **Maintainer:** John Quinn, MD, MPH, PhD, EMT-P  
-**Version:** 1.1.0 · **Last editorial update:** 22 October 2026  
+**Version:** 1.2.0 · **Last editorial update:** 31 October 2026  
 **Clinical review status:** educational draft; independent clinical sign-off is not recorded. Local review and approval are required before operational use.
 
 Blank, reusable templates for clinical audit, patient safety incident review, and quality improvement projects.
@@ -13,6 +13,14 @@ Blank, reusable templates for clinical audit, patient safety incident review, an
 1. [Clinical audit](templates/clinical-audit.md): standards, data collection, results, action plan and re-audit.
 2. [Incident review](templates/incident-review.md): a systems-focused learning review.
 3. [QI project plan](templates/qi-project-plan.md): Model for Improvement and PDSA cycles.
+
+## Open, print and download
+
+- [Hosted synthetic dashboard preview (account access required)](https://john-quinn-governance-demo.cuinne.chatgpt.site) - filter fictional teams, inspect calculations and export CSV.
+- [Printable template pack](downloads/clinical-governance-templates.pdf)
+- [Print-friendly HTML](downloads/clinical-governance-templates.html)
+
+The editable Markdown templates above remain the source for adaptation.
 
 ## Additional portfolio collections
 
@@ -38,8 +46,10 @@ Suggestions are welcome via issues or pull requests. Please do not submit real i
 
 ## Reuse and attribution
 
-These materials are provided for general educational use. A standard open-content licence has not yet been specified; do not assume unrestricted permission to redistribute, adapt or use them commercially. Contact the maintainer through a repository issue to clarify reuse. Linked publications, images, provider resources, names and logos remain subject to their own rights and terms.
+Original educational content and synthetic datasets are available under [CC BY-NC 4.0](LICENSE): noncommercial sharing and adaptation with attribution and identification of changes. Demonstration and maintenance code uses the [MIT license](LICENSE-CODE). Third-party publications, images, provider resources, names and logos retain their own rights. Private DCP materials are outside this release. For commercial content reuse, contact the maintainer through a repository issue.
 
 ## Maintenance
 
 See [CHANGELOG.md](CHANGELOG.md) for dated changes. When suggesting a correction, include the affected file, the proposed wording and a current primary source. Use synthetic examples only. Content should be checked again when relevant guidance changes.
+
+To rebuild the printable editions from Markdown, install ReportLab in a local Python environment and run `python3 tools/build_print_pack.py` from the repository root.

@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.2.0 - 31 October 2026
+
+- Added a public-source Ukraine interoperability case study, hosted synthetic dashboard with CSV export, documented data checks and printable templates. Clarified reuse terms and added link/calculation checks.
+- External clinical review and participant pilots remain unrecorded; no approval or accreditation is implied.
+
 ## Portfolio expansion — 22 October 2026
 
 - Added generic assistance-governance and health-security analysis frameworks, plus a self-contained synthetic-data dashboard with documented calculations.

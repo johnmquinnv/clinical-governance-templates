@@ -6,6 +6,10 @@
 
 A public-source analysis template for healthcare resilience, patient movement and civilian–military interfaces. This collection does not reproduce commissioned papers, unpublished co-authored manuscripts or restricted doctrine.
 
+## Worked example
+
+[Ukraine civilian-military medical interoperability, 2014-2026](ukraine-interoperability-2014-2026.md) applies this framework to public WHO, European Commission and NATO sources. It separates documented events, analysis and proposed educational work.
+
 ## Evidence register
 
 | Source title / issuing body | Official URL | Publication and revision dates | Access date | Status / edition | Exact section | Finding | Limitations |
